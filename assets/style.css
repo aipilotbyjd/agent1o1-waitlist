@@ -351,6 +351,16 @@ h1.display { font-size: clamp(40px, 5.4vw, 64px); font-weight: 600; letter-spaci
 .footer-bottom-links a:hover { color: var(--ink); }
 
 /* ==========================================================================
+   Scroll-snap — page-by-page feel (journey.now style)
+   Applied only on pages whose <body> has .snap (the landing variants).
+   ========================================================================== */
+html:has(.snap) { scroll-snap-type: y proximity; scroll-padding-top: var(--nav-h); }
+.snap .hero, .snap .section, .snap .footer { scroll-snap-align: start; }
+.snap .section { min-height: 100vh; display: flex; flex-direction: column; justify-content: safe center; }
+.snap .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 0; padding-bottom: 0; }
+@media (prefers-reduced-motion: reduce) { html:has(.snap) { scroll-snap-type: none; } }
+
+/* ==========================================================================
    Reveal animation
    ========================================================================== */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
@@ -365,19 +375,42 @@ h1.display { font-size: clamp(40px, 5.4vw, 64px); font-weight: 600; letter-spaci
   .dir-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 760px) {
-  .section { padding: 84px 0; }
-  .steps, .promises { grid-template-columns: 1fr; }
+  .section { padding: 76px 0; }
+  .steps, .promises { grid-template-columns: 1fr; gap: 14px; }
   .contact-grid { grid-template-columns: 1fr; }
+  .nav-inner { padding: 0 18px; }
   .nav-links, .variant-switch { display: none; }
+  .nav-cta .btn { padding: 10px 18px; font-size: 14px; }
   .burger { display: block; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0;
     background: var(--bg-2); border-bottom: 1px solid var(--border); padding: 12px; gap: 2px; }
   .nav-links.open a { padding: 12px 14px; }
   .wl-form { flex-direction: column; }
-  .orbit-node .lbl { font-size: 16px; } .node-av { width: 60px; height: 60px; font-size: 24px; }
-  .blist { margin: 0 auto; }
+
+  /* Mobile hero: drop the orbit, show a clean centered stack */
+  .hero { padding: 64px 0 72px; }
+  .orbit { aspect-ratio: auto; width: 100%; }
+  .orbit-ring, .orbit-node { display: none; }
+  .orbit-core { position: static; inset: auto; padding: 0; display: block; }
+  .hero-center { max-width: 100%; }
+  h1.display { font-size: clamp(34px, 9vw, 46px); }
+  .hero-sub { font-size: 17px; }
+  .hero-actions .btn { flex: 1 1 auto; }
+
+  /* Snap: keep the gentle page-feel but let dense sections breathe */
+  .snap .section, .snap .hero { min-height: auto; display: block; }
+
+  .sec-head { margin-bottom: 40px; }
+  .step, .promise { padding: 26px 24px; }
+  .pain { padding: 20px 20px; }
+  .pain p, .bitem h3 { font-size: 16px; }
+  .demo-body { padding: 18px 16px; }
+  .run li { grid-template-columns: 52px 1fr auto; gap: 10px; padding: 12px; }
+  .run .txt { font-size: 13.5px; }
+  .foot-links a { font-size: 17px; }
 }
 @media (max-width: 480px) {
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .n-left { left: -4%; } .n-right { right: -4%; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+  .badge { font-size: 12px; }
+  h1.display { font-size: clamp(30px, 8.5vw, 40px); }
 }
