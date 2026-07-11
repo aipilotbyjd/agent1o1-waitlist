@@ -362,6 +362,41 @@ html:has(.snap) { scroll-snap-type: y mandatory; scroll-padding-top: var(--nav-h
 .snap .footer { min-height: calc(100vh - var(--nav-h)); display: flex; flex-direction: column; justify-content: safe center; }
 @media (prefers-reduced-motion: reduce) { html:has(.snap) { scroll-snap-type: none; } }
 
+/* ---- Compact snapped pages so each fits one screen (no in-page scroll) ---- */
+.snap .section { padding-block: 20px; }
+.snap .sec-head { margin-bottom: 20px; }
+.snap .sec-head h2 { font-size: clamp(26px, 3.6vw, 40px); }
+.snap .sec-head p { font-size: 16px; }
+/* flatter orbit so the hero fits */
+.snap .hero .orbit { aspect-ratio: 1.95/1; }
+/* demo card compaction */
+.snap .demo-bar { padding: 9px 16px; }
+.snap .demo-body { padding: 14px 18px; }
+.snap .demo-lead { margin-bottom: 9px; }
+.snap .run { gap: 5px; }
+.snap .run li { padding: 6px 14px; }
+.snap .demo-foot { margin-top: 10px; padding-top: 9px; }
+.snap .demo-foot .sub { display: none; }
+/* the demo's section subtitle duplicates the card's first line — drop it when snapped */
+.snap #demo .sec-head p, .snap #recognise + .section .sec-head p { display: none; }
+/* pain list (variant B) compaction */
+.snap .pain-list { gap: 10px; }
+.snap .pain { padding: 15px 22px; }
+.snap .pain p { font-size: 16px; }
+.snap .pain .n { font-size: 26px; }
+/* the pain section's closing line repeats the next section's heading — drop it when snapped */
+.snap #recognise .center { display: none; }
+/* directory (variant C) compaction */
+.snap .dir-grid { margin-top: 26px; gap: 12px; }
+.snap .tool-card { padding: 16px; }
+.snap .tool-ico { width: 38px; height: 38px; margin-bottom: 10px; }
+/* footer compaction */
+.snap .footer { padding-top: 28px; padding-bottom: 22px; }
+.snap .footer .foot-cta { font-size: clamp(28px, 4vw, 42px); margin-bottom: 10px; }
+.snap .footer .foot-sub { margin-bottom: 18px; }
+.snap .footer .foot-links { margin: 18px 0 16px; gap: 7px; }
+.snap .footer .hero-actions { margin-top: 18px; }
+
 /* ==========================================================================
    Reveal animation
    ========================================================================== */
