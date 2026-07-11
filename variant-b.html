@@ -4,26 +4,23 @@
 <meta name="description" content="Forty rows. One chat window. Copy, paste, copy, paste. Build it once. Let it run without you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f0f539'/%3E%3Ctext x='16' y='22' font-size='16' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%231a1a12'%3Ea%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f0f539'/%3E%3Ctext x='16' y='22' font-size='15' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%2314140c'%3Ea1%3C/text%3E%3C/svg%3E">
 
 <!-- ============ NAV ============ -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="brand"><span class="brand-mark"><span>a1</span></span> Agent1o1</a>
+    <a href="index.html" class="brand"><span class="brand-mark">a1</span> <span class="nav-label">Agent1o1</span></a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="variant-b.html#how" class="active">How it works</a>
+      <a href="variant-b.html#how">How it works</a>
       <a href="variant-b.html#promises">Pricing</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-cta">
       <div class="variant-switch" title="A/B test variants">
-        <a href="index.html">A</a>
-        <a href="variant-b.html" class="on">B</a>
-        <a href="variant-c.html">C</a>
+        <a href="index.html">A</a><a href="variant-b.html" class="on">B</a><a href="variant-c.html">C</a>
       </div>
       <a href="#waitlist" class="btn btn-primary">Save my seat</a>
     </div>
@@ -32,14 +29,14 @@
 </nav>
 
 <!-- ============ HERO (Variant B — The Pain) ============ -->
-<header class="hero">
+<header class="hero" data-nav-label="Agent1o1">
   <div class="wrap">
-    <div class="hero-1col">
+    <div class="hero-center">
       <span class="badge"><b>NEW</b> Opening to the first 100</span>
-      <h1 class="display">You're not automating anything.<br>You're <span class="hl">the automation</span>.</h1>
+      <h1 class="display">You're not automating anything.<br>You're <span class="scribble">the automation</span>.</h1>
       <p class="hero-sub">Forty rows. One chat window. Copy, paste, copy, paste. There's a better way to spend your Tuesday.</p>
       <div class="hero-actions">
-        <a href="#recognise" class="btn btn-dark btn-lg">Show me <span class="arrow">→</span></a>
+        <a href="#recognise" class="btn btn-primary btn-lg">Show me <span class="arrow">→</span></a>
         <a href="#waitlist" class="btn btn-ghost btn-lg">Save my seat</a>
       </div>
       <p class="hero-note">Eleven seconds. No signup.</p>
@@ -48,10 +45,10 @@
 </header>
 
 <!-- ============ FIRST SECTION: Recognise any of these? ============ -->
-<section class="section" id="recognise" style="padding-top:24px">
+<section class="section grad-navy" id="recognise" data-nav-label="Sound familiar?">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow" style="justify-content:center">Sound familiar?</span>
+    <div class="sec-head reveal">
+      <span class="eyebrow">sound familiar?</span>
       <h2>Recognise any of these?</h2>
     </div>
     <div class="pain-list">
@@ -60,25 +57,22 @@
       <div class="pain reveal"><div class="n">3</div><p>Your automation tool has an AI step. <b>It's a text box.</b></p></div>
       <div class="pain reveal"><div class="n">4</div><p>The workflow exists. It lives in <b>eleven browser tabs</b> and it runs on you.</p></div>
     </div>
-    <div class="center reveal" style="margin-top:40px">
-      <p class="big-line" style="margin:0 auto 24px">Build it once. Let it run without you.</p>
-      <a href="#demo" class="btn btn-dark btn-lg">Watch it run <span class="arrow">→</span></a>
+    <div class="center reveal" style="margin-top:52px">
+      <p class="big-line" style="margin-bottom:28px">Build it once. <span class="scribble">Let it run</span> without you.</p>
+      <a href="#demo" class="btn btn-primary btn-lg">Watch it run <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
 
 <!-- ============ Demo (shared proof) ============ -->
-<section class="section" id="demo" style="background:var(--bg-warm);border-block:1px solid var(--border)">
-  <div class="wrap" style="max-width:820px">
-    <div class="sec-head center reveal">
-      <span class="eyebrow" style="justify-content:center">A real run</span>
+<section class="section" id="demo" data-nav-label="A real run">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">a real run</span>
       <h2>What "without you" looks like.</h2>
     </div>
     <div class="demo reveal">
-      <div class="demo-bar">
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="demo-title">lead-triage.run</span>
-      </div>
+      <div class="demo-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="demo-title">lead-triage.run</span></div>
       <div class="demo-body">
         <p class="demo-lead">A lead fills out your form at <b>2:14am</b>.</p>
         <ul class="run">
@@ -89,10 +83,7 @@
           <li data-delay="11200"><span class="t">11.2s</span><span class="txt">Everything else drops into a sheet.</span><span class="check">✓</span></li>
         </ul>
         <div class="demo-foot">
-          <div>
-            <div class="big">Eleven seconds. <span>Half a cent.</span></div>
-            <div class="sub">A real run. Those are the real numbers. You were asleep.</div>
-          </div>
+          <div><div class="big">Eleven seconds. <span>Half a cent.</span></div><div class="sub">A real run. Those are the real numbers. You were asleep.</div></div>
           <button class="demo-replay">↻ Replay</button>
         </div>
       </div>
@@ -101,98 +92,60 @@
 </section>
 
 <!-- ============ SHARED: How it works ============ -->
-<section class="section" id="how">
+<section class="section grad-brand" id="how" data-nav-label="How it works">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Three steps</span>
-      <h2>Build it once. Walk away.</h2>
-    </div>
+    <div class="sec-head reveal"><span class="eyebrow">three steps</span><h2>Build it once. <span class="scribble">Walk away.</span></h2></div>
     <div class="steps">
-      <div class="step reveal">
-        <div class="idx">1</div>
-        <h3>Pick a trigger.</h3>
-        <p>A form. A webhook. An email landing in your inbox. Every Monday at 9.</p>
-      </div>
-      <div class="step reveal">
-        <div class="idx">2</div>
-        <h3>Add steps that think.</h3>
-        <p>Read this. Decide that. Write the reply. Skip the ones that don't matter.</p>
-      </div>
-      <div class="step reveal">
-        <div class="idx">3</div>
-        <h3>Press run and go to bed.</h3>
-        <p>Every step shows what went in, what came out, how long it took, and what it cost. If something breaks, you'll know which step and why — not just "Workflow failed."</p>
-      </div>
+      <div class="step reveal"><div class="idx">1</div><h3>Pick a trigger.</h3><p>A form. A webhook. An email landing in your inbox. Every Monday at 9.</p></div>
+      <div class="step reveal"><div class="idx">2</div><h3>Add steps that think.</h3><p>Read this. Decide that. Write the reply. Skip the ones that don't matter.</p></div>
+      <div class="step reveal"><div class="idx">3</div><h3>Press run and go to bed.</h3><p>Every step shows what went in, what came out, how long it took, and what it cost. If something breaks, you'll know which step and why — not just "Workflow failed."</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ SHARED: Promises / Pricing ============ -->
-<section class="section" id="promises" style="background:var(--bg-warm);border-block:1px solid var(--border)">
+<!-- ============ SHARED: Promises ============ -->
+<section class="section" id="promises" data-nav-label="No small print">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">No small print</span>
-      <h2>Three things nobody else will tell you.</h2>
-    </div>
+    <div class="sec-head reveal"><span class="eyebrow">no small print</span><h2>Three things nobody else will tell you.</h2></div>
     <div class="promises">
-      <div class="promise reveal">
-        <div class="pico">👁️</div>
-        <h3>You see the price before you press run.</h3>
-        <p>Every step shows its cost on the canvas. No surprises on the first of the month.</p>
-      </div>
-      <div class="promise reveal">
-        <div class="pico">🔑</div>
-        <h3>Bring your own key and we take nothing.</h3>
-        <p>Plug in your own model provider. Zero markup. We can afford to say that. Most can't.</p>
-      </div>
-      <div class="promise reveal">
-        <div class="pico">🎁</div>
-        <h3>Thinking costs money. Everything else is free.</h3>
-        <p>Loops, filters, branches, webhooks — free forever. If it doesn't cost us, it doesn't cost you.</p>
-      </div>
+      <div class="promise reveal"><div class="pico">👁️</div><h3>You see the price before you press run.</h3><p>Every step shows its cost on the canvas. No surprises on the first of the month.</p></div>
+      <div class="promise reveal"><div class="pico">🔑</div><h3>Bring your own key and we take nothing.</h3><p>Plug in your own model provider. Zero markup. We can afford to say that. Most can't.</p></div>
+      <div class="promise reveal"><div class="pico">🎁</div><h3>Thinking costs money. Everything else is free.</h3><p>Loops, filters, branches, webhooks — free forever. If it doesn't cost us, it doesn't cost you.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ============ SHARED: Waitlist ============ -->
-<section class="section-sm" id="waitlist">
+<section class="section grad-navy" id="waitlist" data-nav-label="The first hundred">
   <div class="wrap">
     <div class="cta-band reveal">
       <div class="wl-intro">
         <span class="wl-count"><span class="pulse"></span> 48 of 100 seats taken</span>
-        <span class="eyebrow center" style="display:block">The first hundred</span>
+        <div><span class="eyebrow">the first hundred</span></div>
         <h2>I'm opening this to a hundred people first.</h2>
         <p>Not clever marketing — I'm one person, and a hundred is roughly how many I can talk to properly while I get this right. You get the founding price for as long as you stay, and you get me: replying to your emails, building the workflow you asked for, showing you what's shipping first.</p>
-        <form class="wl-form">
-          <input type="email" placeholder="you@company.com" required aria-label="Email">
-          <button class="btn btn-primary btn-lg" type="submit">Save my seat</button>
-        </form>
+        <form class="wl-form"><input type="email" placeholder="you@company.com" required aria-label="Email"><button class="btn btn-primary btn-lg" type="submit">Save my seat</button></form>
         <p class="wl-note">No spam, ever. One email when it opens.</p>
       </div>
       <div class="wl-success">
         <h2 style="margin-bottom:8px">You're #48 of 100.</h2>
-        <p style="margin-bottom:26px"><b style="color:#fff">Now tell me the one that beat you.</b> What's the automation you gave up on — the one that broke, or the one you never started because it was going to be too much work? Don't polish it. Just tell me what it was supposed to do.</p>
-        <form>
+        <p style="color:var(--ink-2);margin-bottom:26px;max-width:54ch;margin-left:auto;margin-right:auto"><b style="color:var(--ink)">Now tell me the one that beat you.</b> What's the automation you gave up on — the one that broke, or the one you never started because it was going to be too much work? Don't polish it. Just tell me what it was supposed to do.</p>
+        <form style="max-width:500px;margin:0 auto">
           <textarea placeholder="It was supposed to…" aria-label="Your automation"></textarea>
-          <div style="display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap">
-            <button class="btn btn-primary btn-lg" type="submit">Send it</button>
-            <a href="#" data-skip style="color:#9c9b93;font-size:14px">or skip</a>
-          </div>
+          <div style="display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap"><button class="btn btn-primary btn-lg" type="submit">Send it</button><a href="#" data-skip class="btn-link">or skip</a></div>
         </form>
-        <p class="wl-note" style="margin-top:18px">I'm building the best ones as templates. Free, ready to run, with your name on them. Yours might be the first thing I build.</p>
+        <p class="wl-note">I'm building the best ones as templates. Free, with your name on them.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ SHARED: Founder ============ -->
-<section class="section" style="background:var(--bg-warm);border-top:1px solid var(--border)">
+<section class="section" data-nav-label="Who's building this">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">Who's building this</span></div>
+    <div class="sec-head reveal"><span class="eyebrow">who's building this</span></div>
     <div class="founder reveal">
-      <div class="founder-photo">
-        <div class="ph"><div class="avatar">👨‍💻</div>Your photo here<br>(real, not stock)</div>
-      </div>
+      <div class="founder-photo"><div class="ph"><div class="avatar">👨‍💻</div>your photo here<br>(real, not stock)</div></div>
       <div class="founder-body">
         <h2>I'm Jaydeep. It's just me.</h2>
         <p>I built the engine underneath this — the retries, the version history, the thing that shows you exactly which step broke — because I got tired of wiring AI calls into cron jobs and watching them die at 3am.</p>
@@ -205,37 +158,20 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="footer">
+<footer class="footer" data-nav-label="Start today">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" class="brand"><span class="brand-mark"><span>a1</span></span> Agent1o1</a>
-        <p class="footer-tag">A canvas where you drag steps onto a grid — and some of those steps can think. Build it once, let it run without you.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Product</h5>
-        <a href="index.html#how">How it works</a>
-        <a href="index.html#promises">Pricing</a>
-        <a href="variant-c.html">Tool directory</a>
-        <a href="index.html#waitlist">Join the waitlist</a>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="mailto:jaydeep@agent1o1.com">Changelog</a>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <a href="terms.html">Terms of Service</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html#security">Security</a>
-      </div>
+    <p class="foot-cta reveal">Stop being the <span class="scribble">automation</span>.</p>
+    <p class="foot-sub reveal">Tell me the workflow that runs on you. I'll break it into steps you can drag onto a canvas.</p>
+    <div class="hero-actions reveal" style="justify-content:center">
+      <a href="#waitlist" class="btn btn-primary btn-lg">Save my seat</a>
+      <a href="variant-c.html" class="btn btn-ghost btn-lg">Take the tool directory</a>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Agent1o1. All rights reserved.</span>
-      <span class="made">Built by one person, in the open. <b>jaydeep@agent1o1.com</b></span>
-    </div>
+    <div class="foot-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="mailto:jaydeep@agent1o1.com">jaydeep@agent1o1.com</a></div>
+  </div>
+  <div class="footer-bottom">
+    <a href="index.html" class="brand"><span class="brand-mark">a1</span> Agent1o1</a>
+    <span>© 2026 Agent1o1 · Built by one person, in the open.</span>
+    <span class="footer-bottom-links"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></span>
   </div>
 </footer>
 

@@ -17,6 +17,27 @@
     burger.addEventListener('click', function () { links.classList.toggle('open'); });
   }
 
+  /* ---- Nav label morphs to the section name on scroll (journey.now signature) ---- */
+  var navLabel = document.querySelector('.nav-label');
+  var labelled = Array.prototype.slice.call(document.querySelectorAll('[data-nav-label]'));
+  if (navLabel && labelled.length) {
+    var defaultLabel = navLabel.textContent;
+    function updateLabel() {
+      var current = defaultLabel, best = -Infinity;
+      var line = window.scrollY + 120;
+      labelled.forEach(function (el) {
+        var top = el.getBoundingClientRect().top + window.scrollY;
+        if (top <= line && top > best) { best = top; current = el.getAttribute('data-nav-label'); }
+      });
+      if (navLabel.textContent !== current) {
+        navLabel.style.opacity = '0';
+        setTimeout(function () { navLabel.textContent = current; navLabel.style.opacity = '1'; }, 160);
+      }
+    }
+    window.addEventListener('scroll', updateLabel, { passive: true });
+    updateLabel();
+  }
+
   /* ---- Scroll reveal ---- */
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
