@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Agent1o1</title>
+<meta name="description" content="We collect your email, your workflows, and the logs of what they did. We don't sell anything. You can ask us to delete it all and we will.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f0f539'/%3E%3Ctext x='16' y='22' font-size='16' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%231a1a12'%3Ea%3C/text%3E%3C/svg%3E">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><span>a1</span></span> Agent1o1</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#promises">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html#waitlist" class="btn btn-primary">Save my seat</a>
+    </div>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1 style="margin-top:14px">Privacy Policy</h1>
+    <p>Last updated: <code>[DATE]</code></p>
+  </div>
+</header>
+
+<article class="prose">
+  <div class="callout">
+    <p><b>The short version.</b> We collect your email, your workflows, and the logs of what those workflows did. We use them to run the product and to fix it when it breaks. We don't sell anything to anyone. You can ask us to delete it all and we will. The long version is below, because the short version isn't legally sufficient and because some of the details actually matter to you.</p>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Agent1o1 is operated by <code>[LEGAL ENTITY NAME]</code>, <code>[REGISTERED ADDRESS, CITY, STATE, PIN, India]</code>.</p>
+  <p>For anything in this policy, write to <a href="mailto:privacy@agent1o1.com">privacy@agent1o1.com</a>.</p>
+  <p>Under India's Digital Personal Data Protection Act, 2023, our Grievance Officer is <code>[NAME]</code>, reachable at <a href="mailto:grievance@agent1o1.com">grievance@agent1o1.com</a>. If you're unhappy with how we've handled your data, that's the person who has to answer you.</p>
+
+  <h2>2. What we collect</h2>
+  <p><b>When you join the waitlist.</b> Your email address. Nothing else. If you answer our question about the automation you gave up on, we keep your answer.</p>
+  <p><b>When you create an account.</b> Your email address, a hashed password or your identity from a login provider, your workspace name, and your plan.</p>
+  <p><b>When you build a workflow.</b> The workflow itself: the nodes, how they're connected, and how each one is configured. This includes any prompt text, URLs, or settings you type in.</p>
+  <p><b>When a workflow runs.</b> A record of the run. For every node: what went into it, what came out of it, how long it took, whether it failed, and what it cost. This is the run history you see in the product, and it's the reason you can debug anything.</p>
+  <p><b>When you pay.</b> Our payment processor <code>[PROCESSOR NAME]</code> handles your card. We never see or store your card number. We store your billing email, your plan, your invoices, and your credit balance.</p>
+  <p><b>Automatically.</b> IP address, browser type, pages visited, and error reports. We use <code>[ANALYTICS PROVIDER]</code>, configured without cookies where possible.</p>
+
+  <h2>3. The data you put through your workflows</h2>
+  <p>This is the section worth reading properly.</p>
+  <p>Your workflows will process data that isn't yours. Your customers' names. Their emails. Whatever a form submission contains. That data passes through our systems, gets sent to AI models, and gets stored in your run history.</p>
+  <p><b>In legal terms:</b> for that data, you are the controller and we are the processor. You decide what goes in. We only do what your workflow instructs. We don't use it for anything else — not to improve our product, not to train anything, not for analytics.</p>
+  <p><b>In practical terms:</b> don't put data through Agent1o1 that you aren't allowed to send to a third party. If you're processing personal data of people in Europe, you need a lawful basis for it, and you need a Data Processing Agreement with us. Ask and we'll sign one.</p>
+  <p><b>Run history contains that data.</b> If a node processed someone's email address, that email address is sitting in the run log. You can delete individual runs at any time, and you can set your workspace to keep run history for <code>[N]</code> days and no longer.</p>
+
+  <h2>4. AI model providers</h2>
+  <p>When a workflow reaches an AI node, the contents of that node — your prompt, plus whatever data your workflow fed into it — are sent to a model provider to be processed.</p>
+  <p>Which provider depends on which model you chose. Current providers are listed in section 7.</p>
+  <p><b>If you bring your own API key</b>, your data goes directly to that provider under <i>your</i> agreement with them, not ours. Their terms govern what they do with it. We pass it through and store the result in your run history.</p>
+  <p><b>If you use our credits</b>, we send your data under our agreement with the provider. We use accounts configured so that your data is not used to train their models. We can't make promises on their behalf beyond what our contract with them says, so if this matters to you, bring your own key and read their terms yourself.</p>
+
+  <h2>5. Your API keys</h2>
+  <p>If you bring your own key, we store it encrypted at rest. It is decrypted only at the moment a workflow needs it, and it is never written to logs, never shown back to you in full, and never sent anywhere except the provider it belongs to.</p>
+  <p>Nobody at Agent1o1 can read your keys. If you delete a key, it's gone and we can't recover it.</p>
+
+  <h2>6. Why we're allowed to process this</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>What we do</th><th>Why we're allowed to</th></tr></thead>
+    <tbody>
+      <tr><td>Run your workflows, store your account</td><td>To perform the contract you signed up for</td></tr>
+      <tr><td>Send you product emails, invoices</td><td>Contract</td></tr>
+      <tr><td>Fix bugs, prevent abuse, keep the service up</td><td>Our legitimate interest in a working, un-abused product</td></tr>
+      <tr><td>Waitlist emails, product announcements</td><td>Your consent. Withdraw it any time.</td></tr>
+      <tr><td>Keep financial records</td><td>Because Indian tax law requires it</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>7. Who else touches your data</h2>
+  <p>We use these companies to run Agent1o1. They only get what they need.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Who</th><th>What they do</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td><code>[HOSTING]</code></td><td>Servers, databases</td><td><code>[REGION]</code></td></tr>
+      <tr><td><code>[MODEL PROVIDERS]</code></td><td>Process AI node contents</td><td><code>[REGION]</code></td></tr>
+      <tr><td><code>[PAYMENT PROCESSOR]</code></td><td>Payments, invoices</td><td><code>[REGION]</code></td></tr>
+      <tr><td><code>[EMAIL PROVIDER]</code></td><td>Transactional and product email</td><td><code>[REGION]</code></td></tr>
+      <tr><td><code>[ANALYTICS]</code></td><td>Product usage, error reports</td><td><code>[REGION]</code></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>This list is current as of the date at the top. When it changes, we update this page. If you're on a paid plan and you want to be told when it changes, email us and we'll add you to the list.</p>
+  <p><b>We do not sell your data.</b> We do not share it with advertisers. There is no advertising anywhere in this product.</p>
+
+  <h2>8. Where your data lives</h2>
+  <p><code>[REGION]</code>. If we move it, we'll say so here first.</p>
+  <p>If you're in the EU or UK and your data leaves that area, we rely on <code>[Standard Contractual Clauses / adequacy decision]</code> to do it lawfully.</p>
+
+  <h2>9. How long we keep things</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Data</th><th>Kept for</th></tr></thead>
+    <tbody>
+      <tr><td>Waitlist email</td><td>Until you unsubscribe, or we launch and you don't sign up</td></tr>
+      <tr><td>Account details</td><td>While your account is open</td></tr>
+      <tr><td>Workflows</td><td>While your account is open</td></tr>
+      <tr><td>Run history</td><td><code>[90]</code> days by default, or whatever you set</td></tr>
+      <tr><td>Invoices, tax records</td><td><code>[8]</code> years, because Indian law says so</td></tr>
+      <tr><td>API keys</td><td>Until you delete them</td></tr>
+      <tr><td>Backups</td><td><code>[30]</code> days, then overwritten</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>When you delete your account, we delete your workflows, runs, and keys within <code>[30]</code> days. Financial records survive, because we're required to keep them.</p>
+
+  <h2>10. What you can ask us to do</h2>
+  <p>Whoever you are and wherever you live, you can ask us to:</p>
+  <ul>
+    <li><b>Show you</b> everything we hold about you</li>
+    <li><b>Correct</b> anything that's wrong</li>
+    <li><b>Delete</b> your account and everything in it</li>
+    <li><b>Export</b> your workflows and run history in a machine-readable format</li>
+    <li><b>Stop</b> sending you email</li>
+    <li><b>Explain</b> anything on this page</li>
+  </ul>
+  <p>Email <a href="mailto:privacy@agent1o1.com">privacy@agent1o1.com</a>. We'll do it within 30 days, usually within a couple of days, because there's one of us and we read our own email.</p>
+  <p>If you're in the EU or UK you also have the right to object to processing, to restrict it, and to complain to your local data protection authority. If you're in India, you can escalate to the Data Protection Board after going through our Grievance Officer.</p>
+  <p>We won't make you jump through hoops, and we won't charge you.</p>
+
+  <h2>11. Security</h2>
+  <p>Encryption in transit and at rest. API keys separately encrypted. Access to production limited to <code>[N]</code> person. Two-factor authentication on every system we can put it on. Automated backups, tested restores.</p>
+  <p>We're a small operation. We've built this carefully, but no system is perfect. If you find a vulnerability, email <a href="mailto:security@agent1o1.com">security@agent1o1.com</a> and we'll respond within a day. We won't take legal action against anyone who reports a problem in good faith.</p>
+  <p>If we ever suffer a breach that puts your data at risk, we'll tell you and the relevant authority, promptly and in plain language, including what we don't yet know.</p>
+
+  <h2>12. Children</h2>
+  <p>Agent1o1 isn't for anyone under 18. We don't knowingly collect data from children. If you believe we have, email us and we'll delete it.</p>
+
+  <h2>13. Changes to this policy</h2>
+  <p>If we change something meaningful, we'll email everyone with an account before it takes effect. Small corrections just get made, and the date at the top changes.</p>
+
+  <h2>14. Contact</h2>
+  <p><a href="mailto:privacy@agent1o1.com">privacy@agent1o1.com</a><br>
+  <code>[LEGAL ENTITY NAME]</code>, <code>[FULL REGISTERED ADDRESS]</code><br>
+  Grievance Officer: <code>[NAME]</code>, <a href="mailto:grievance@agent1o1.com">grievance@agent1o1.com</a></p>
+</article>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-mark"><span>a1</span></span> Agent1o1</a>
+        <p class="footer-tag">A canvas where you drag steps onto a grid — and some of those steps can think. Build it once, let it run without you.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#promises">Pricing</a>
+        <a href="variant-c.html">Tool directory</a>
+        <a href="index.html#waitlist">Join the waitlist</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:jaydeep@agent1o1.com">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html#security">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Agent1o1. All rights reserved.</span>
+      <span class="made">Built by one person, in the open. <b>jaydeep@agent1o1.com</b></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
