@@ -354,11 +354,12 @@ h1.display { font-size: clamp(40px, 5.4vw, 64px); font-weight: 600; letter-spaci
    Scroll-snap — page-by-page feel (journey.now style)
    Applied only on pages whose <body> has .snap (the landing variants).
    ========================================================================== */
-html:has(.snap) { scroll-snap-type: y mandatory; }
+html:has(.snap) { scroll-snap-type: y mandatory; scroll-padding-top: var(--nav-h); }
 .snap .hero, .snap .section, .snap .footer { scroll-snap-align: start; scroll-snap-stop: always; }
-.snap .section { min-height: 100vh; display: flex; flex-direction: column; justify-content: safe center; padding-top: 96px; padding-bottom: 48px; }
-.snap .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 0; padding-bottom: 0; }
-.snap .footer { min-height: 100vh; display: flex; flex-direction: column; justify-content: safe center; }
+/* subtract the sticky header from the full-screen height so nothing hides behind it */
+.snap .section { min-height: calc(100vh - var(--nav-h)); display: flex; flex-direction: column; justify-content: safe center; padding-block: 64px; }
+.snap .hero { min-height: calc(100vh - var(--nav-h)); display: flex; align-items: center; padding-top: 0; padding-bottom: 0; }
+.snap .footer { min-height: calc(100vh - var(--nav-h)); display: flex; flex-direction: column; justify-content: safe center; }
 @media (prefers-reduced-motion: reduce) { html:has(.snap) { scroll-snap-type: none; } }
 
 /* ==========================================================================
