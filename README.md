@@ -10,7 +10,7 @@ Static HTML/CSS/JS. No build step. Brand color `#f0f539` on a warm, Claude-inspi
 |------|------|---------|
 | **Variant A — The Outcome** | `index.html` | "Wake up to work that's already done." Sells the after-state. |
 | **Variant B — The Pain** | `variant-b.html` | "You're not automating anything. You're the automation." |
-| **Variant C — The Tool** | `variant-c.html` | "Two hundred AI tools. One canvas." Leads with a free directory. |
+| **Variant C — The Tool** | `variant-c.html` | "60+ AI tools. One canvas." Leads with a free directory. |
 | About | `about.html` | Founder note. |
 | Contact | `contact.html` | Emails + legal details. |
 | Terms of Service | `terms.html` | |
